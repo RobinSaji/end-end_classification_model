@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static\styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    c<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+</head>
+<body>
+    <h2>Iris Classifier </h2>
+    <div class="container">
+        <div class="box">
+            <form action="{{url_for('predict')}}" method="post">
+                <input type="text" name="sepallength" id="sepallength" placeholder="sepal length"  class="inputbox"><br><br>    
+                <input type="text" name="sepalwidth" id="sepalwidth" placeholder="sepal width"  class="inputbox"><br> <br>
+                <input type="text" name="petallength" id="petallength" placeholder="pletal length"  class="inputbox"><br> <br>       
+                <input type="text" name="petalwidth" id="petalwidth" placeholder="petal width"  class="inputbox"><br><br>
+                <button type="submit">submit</button>
+        
+        
+            </form>
+
+        </div>
+        
+       
+
+    </div>
+    <div class="jinja">{{classification_text }}</div>
+    <!-- <img class="irisflower" src="/static/download.jpg" alt="iris flower"> -->
+    
+</body>
+</html>
